@@ -3,7 +3,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false, unique: true|
+|nick_name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
@@ -13,6 +13,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null: false, foreign_key: true|
+|name|string|null: false|
 |store_type|integer|null: false|
 |address|string|null: false|
 |prefecture|integer|null: false|
@@ -28,9 +29,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |store_id|references|null: false, foreign_key: true|
+|name|string|null: false|
 |item_type|integer|null: false|
 |price|integer|null: false|
-|post_data|data|null: false|
-|leaflet_photo|string||
+|post_data|date|null: false|
+|leaflet_image|string||
 ### Association
 - belongs_to :store
